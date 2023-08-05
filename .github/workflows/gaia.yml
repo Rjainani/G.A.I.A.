@@ -1,4 +1,4 @@
-name: Manual Trigger Workflow
+name: G.A.I.A.
 
 on:
   workflow_dispatch:  # This event allows manual triggering of the workflow from the GitHub Actions UI.
