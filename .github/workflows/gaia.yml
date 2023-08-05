@@ -1,6 +1,10 @@
 name: G.A.I.A.
 
 on:
+  pull_request:  # Trigger the workflow when a new pull request is created
+    types:
+      - opened  # Run the workflow only when a new pull request is opened
+
   workflow_dispatch:  # This event allows manual triggering of the workflow from the GitHub Actions UI.
 
 jobs:
@@ -10,6 +14,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+
+      # Add your build and deployment steps here.
+      # For demonstration purposes, let's echo a message.
 
       - name: Build and Deploy
         run: |
