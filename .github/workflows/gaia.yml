@@ -1,0 +1,16 @@
+name: Manual Trigger Workflow
+
+on:
+  workflow_dispatch:  # This event allows manual triggering of the workflow from the GitHub Actions UI.
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Build and Deploy
+        run: |
+          echo "Build and deployment steps go here!"
