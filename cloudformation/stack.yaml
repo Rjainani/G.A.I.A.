@@ -17,3 +17,9 @@ Resources:
           FromPort: 80
           ToPort: 80
           CidrIp: 0.0.0.0/0
+  MySecretResource:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Name: MySecret
+      Description: My secret value
+      SecretString: '{"username": "my_username", "password": "my_password"}'
